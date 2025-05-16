@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import sdpic from '../img/sdpic.png';
 const Hero = () => {
   return (
     <section id="home" className="h-screen flex items-center justify-center relative overflow-hidden">
@@ -41,7 +41,7 @@ const Hero = () => {
           className="md:w-1/2 mt-12 md:mt-0"
         >
           <img
-            src="src/img/sdpic.png"
+            src={sdpic}
             alt="3D Developer Illustration"
             className="w-full max-w-lg mx-auto"
           />
