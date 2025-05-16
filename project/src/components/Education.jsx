@@ -25,6 +25,9 @@ const Education = () => {
     "Completed HTML,CSS course in Infosys Spring Board",
     "Done Prompt Engineering certification in Simplilearn"
   ];
+  const Achievements = [
+    "Shotlisted for TechXcelerate Hackathon(AI&ML) from more than 250+ teams"
+  ];
 
   return (
     <section id="education" className="min-h-screen py-20 bg-gray-900">
@@ -70,6 +73,19 @@ const Education = () => {
                 </div>
               ))}
             </div>
+               <h3 className="text-2xl font-semibold mb-6 text-blue-400">Achievements</h3>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              {Achievements.map((cert, index) => (
+                <div key={index} className="mb-4 flex items-center">
+                  <span className="text-yellow-400 mr-2">🎖</span>
+                  <p>{cert}</p>
+                </div>
+              ))}
+            </div>
+
+
+
+
           </motion.div>
         </div>
       </div>

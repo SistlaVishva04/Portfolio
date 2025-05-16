@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCircle, FaTimes } from 'react-icons/fa';
 
+import APIIcon from '../img/APIIcon.png';
+import sethuicon from '../img/sethuicon.jpg' ;
+import BotIcon from '../img/BotIcon.webp';
+// Import your image here
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -9,17 +13,20 @@ const Projects = () => {
     {
       title: "Sureksha Setu",
       description: "An online web application designed to assist people during natural or man-made calamities. It gathers input from victims regarding their situation and promptly activates the nearest available volunteer. By coordinating with NGOs such as Akshaya Patra and government forces like the NDRF, the platform ensures efficient disaster response.",
-      imageUrl: "", // Placeholder for image
+      imageUrl:sethuicon, 
+      githubUrl: "",
     },
     {
-      title: "Tillu AI dialogues chatbot with emotion",
-      description: "A chatbot which gives dailogues in Dj tillu movie character slang according to the user emotion given to it",
-      imageUrl: "", // Placeholder for image
+      title: "Movie Character Chatbot:",
+      description: "A chatbot which respond like the movie character you choose to talk there are more than 30+ fictional character related to different movie industry (Tollyword,Bollyword,Hollyword) you can clear your doubts with them you can ask anything to them they will respond according to the personality them have in that movie",
+      imageUrl:BotIcon, 
+      githubUrl: "https://github.com/SistlaVishva04/MovieCharacters_Chatbot",
     },
     {
-      title: "Mini Music Store System",
-      description: "A music player which has the features of Spotify which can pause, play, time speed, volume change also has a search bar --HTML ,CSS, JavaScript",
-      imageUrl: "", // Placeholder for image
+      title: "API Keys Generator",
+      description: "Created a web-based API Keys Generator platform that grants users free access to a vast number of public API keys depending on their requirements, such as AI models (OpenAI, Gemini), weather services, maps, and more",
+      imageUrl:APIIcon,
+      githubUrl: "", 
     }
   ];
 
@@ -44,7 +51,7 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="bg-gray-700 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300 shadow-xl"
             >
-              <div className="h-48 bg-gray-600 relative">
+              <div className="h-49 bg-gray-600 relative">
                 {project.imageUrl ? (
                   <img
                     src={project.imageUrl}
@@ -74,10 +81,12 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="border border-blue-500 text-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors"
-                  >
-                    GitHub
+                    onClick={() => window.open(project.githubUrl, '_blank')}
+                  className="border border-blue-500 text-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition-colors">
+                
+                 GitHub
                   </motion.button>
+
                 </div>
               </div>
             </motion.div>

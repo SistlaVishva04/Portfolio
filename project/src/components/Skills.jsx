@@ -4,9 +4,11 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skills = {
     'Programming Languages': ['Python', 'Java', 'C'],
-    'Web Development': ['HTML', 'CSS', 'JavaScript', 'React', 'JDBC'],
-    'AI & ML': ['Streamlit', 'Flask','Data Preprocessing & Feature Engineering'],
-    'Databases': ['MySQL'],
+    'Web Development': ['HTML', 'CSS', 'JavaScript', 'React','Flask',"Node.js"],
+    'AI & ML': ['Streamlit','Data Preprocessing & Feature Engineering'],
+    'Version Control': ['Git', 'GitHub'],
+    'Deployment': ['Netlify', 'Render'],
+    'Databases': ['MySQL','JDBC'],
     'Data Visualization': ['PowerBI']
   };
 
