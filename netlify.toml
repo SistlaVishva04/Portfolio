@@ -1,0 +1,8 @@
+[build]
+  base = "project"
+  publish = "dist"
+  command = "npm run build"
+
+[dev]
+  command = "npm run dev"
+  port = 3000
